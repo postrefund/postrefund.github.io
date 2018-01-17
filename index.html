@@ -7,6 +7,7 @@
 
   <!-- Site Properties -->
   <title>PostRefund</title>
+
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/site.css">
 
@@ -22,7 +23,6 @@
   <link rel="stylesheet" type="text/css" href="assets/css/button.css">
   <link rel="stylesheet" type="text/css" href="assets/css/list.css">
   <link rel="stylesheet" type="text/css" href="assets/css/icon.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
   <link rel="stylesheet" type="text/css" href="assets/css/transition.css">
 
   <style type="text/css">
@@ -32,28 +32,25 @@
     }
 
     .masthead.segment {
-      min-height: 700px;
+      min-height: 500px;
       padding: 1em 0em;
     }
-    .masthead .logo.item img {
-      margin-right: 1em;
-    }
-    .masthead .ui.menu .ui.button {
-      margin-left: 0.5em;
-    }
+
     .masthead h1.ui.header {
       margin-top: 3em;
       margin-bottom: 0em;
-      font-size: 4em;
+      font-size: 2.5em;
       font-weight: normal;
     }
     .masthead h2 {
-      font-size: 1.7em;
+      font-size: 1.5em;
+      margin-top: 0em;
+      margin-bottom: 2em;
       font-weight: normal;
     }
 
     .ui.vertical.stripe {
-      padding: 8em 0em;
+      padding: 3em 0em;
     }
     .ui.vertical.stripe h3 {
       font-size: 2em;
@@ -72,13 +69,6 @@
       margin: 3em 0em;
     }
 
-    .quote.stripe.segment {
-      padding: 0em;
-    }
-    .quote.stripe.segment .grid .column {
-      padding-top: 5em;
-      padding-bottom: 5em;
-    }
 
     .footer.segment {
       padding: 5em 0em;
@@ -117,46 +107,10 @@
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/visibility.js"></script>
-  <script src="assets/js/sidebar.js"></script>
   <script src="assets/js/transition.js"></script>
-  <script>
-  $(document)
-    .ready(function() {
 
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
-  </script>
 </head>
 <body class="pushable">
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu left">
-  <a class="active item">Home</a>
-  <a class="item">Work</a>
-  <a class="item">Company</a>
-  <a class="item">Careers</a>
-  <a class="item">Login</a>
-  <a class="item">Signup</a>
-</div>
-
 
 <!-- Page Contents -->
 <div class="pusher">
@@ -169,17 +123,18 @@
         </a>
         <a class="active item">PostRefund</a>
         <div class="right item">
-          <a class="ui inverted button">Contact</a>
+          <a class="ui inverted button" href="mailto:contact@postrefund.com">Contact Us</a>
         </div>
       </div>
     </div>
 
     <div class="ui text container">
       <h1 class="ui inverted header">
-        Receive Late Shipment Refunds, Automatically
+        Receive Refunds for Late Shipments
       </h1>
-      <h2>You are entitled to refunds on late shipments, why not claim them?</h2>
-      <a href="#" target="_blank" class="ui huge primary button">Add PostRefund to Shopify</a>
+      <h2>Made easy now and soon to be fully automatic</h2>
+      <!-- <a href="https://postrefund.herokuapp.com" target="_blank" class="ui huge primary button">Add PostRefund to Shopify</a> -->
+      <a href="https://postrefund.herokuapp.com" target="_blank" class="ui huge primary button">Request Private Beta Access</a>
     </div>
 
   </div>
@@ -187,53 +142,65 @@
   <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
-        <div class="eight wide column">
+
+        <div class="sixteen wide column">
           <h3 class="ui header">How PostRefund Works</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
-          <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
-        </div>
-        <div class="six wide right floated column">
-          <img src="assets/images/white-image.png" class="ui large bordered rounded image">
-        </div>
-      </div>
-      <div class="row">
-        <div class="center aligned column">
-          <a class="ui huge button">Check Them Out</a>
-        </div>
-      </div>
+          <p>Did you know that you are entitled to a refund if your Canada Post shipment was late?</p><p>Currently it's a time consuming process to manually keep track of all your shipments and claim potential refunds. PostRefund integrates to your Shopify shop and keeps track of your shipments automatically. When a late shipment is detected, we send you an email and with the click of one button you can claim the refund. We will soon have this fully automated.</p>
+
+          <img src="assets/images/screenshot.png" class="ui bordered rounded image" alt="Screenshot of PostRefund Interface">
+
+          <h3 class="ui header">Who is this service for</h3>
+          <p>You are using Shopify to sell goods and Canada Post to fulfill shipments. In the future we will add additional options (e-commerce solutions and shipping companies) to our offering, please let us know what you options you would like to see integrated.</p>
+          <h3 class="ui header">Sign Up</h3>
+          <p>Do you want to try it already? Request private beta access or just get on our mailing list to receive updates as our service becomes available and more options are added.</p>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://postrefund.us17.list-manage.com/subscribe/post?u=65cad334e2deea00c2f279fec&amp;id=ddf8fd6eda" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="ui form validate" target="_blank" novalidate>
+
+    <div id="mc_embed_signup_scroll">
+  <h2>Subscribe to our mailing list</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+  <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FNAME">First Name </label>
+  <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+  <label for="mce-LNAME">Last Name </label>
+  <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+<div class="mc-field-group">
+  <label for="mce-SHOP">Shopify Shop URL  <span class="asterisk">*</span>
+</label>
+  <input type="url" value="" name="SHOP" class="required url" id="mce-SHOP">
+</div>
+<div class="mc-field-group input-group">
+    <strong>Request Private Beta Access  <span class="asterisk">*</span>
+</strong>
+    <ul><li><input type="radio" value="Yes, please" name="BETA" id="mce-BETA-0"><label for="mce-BETA-0">Yes, please</label></li>
+<li><input type="radio" value="No, but let me know when you launch" name="BETA" id="mce-BETA-1"><label for="mce-BETA-1">No, but let me know when you launch</label></li>
+</ul>
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_65cad334e2deea00c2f279fec_ddf8fd6eda" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
-  </div>
+</form>
+</div>
 
+<!--End mc_embed_signup-->
+          <h3 class="ui header">Pricing</h3>
+          <p>Our service is free as long as it is in private beta. After we launch we will give you 25 automatic refund requests for free and then charge you US$1 for each refund claimed. We think that's a fair deal considering you will get refunds that you would otherwise have lost track of. More refunds for you and a little share of it for us to operate this service.</p>
+        </div>
 
-  <div class="ui vertical stripe quote segment">
-    <div class="ui equal width stackable internally celled grid">
-      <div class="center aligned row">
-        <div class="column">
-          <h3>"What a Company"</h3>
-          <p>That is what they all say about us</p>
-        </div>
-        <div class="column">
-          <h3>"I shouldn't have gone with their competitor."</h3>
-          <p>
-            <img src="assets/images/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-          </p>
-        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="ui vertical stripe segment">
-    <div class="ui text container">
-      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-      <a class="ui large button">Read More</a>
-      <h4 class="ui horizontal header divider">
-        <a href="https://semantic-ui.com/examples/homepage.html#">Case Studies</a>
-      </h4>
-      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-      <a class="ui large button">I'm Still Quite Interested</a>
     </div>
   </div>
 
